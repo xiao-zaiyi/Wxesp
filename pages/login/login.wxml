@@ -1,0 +1,19 @@
+<view class="login-container">
+	<view class="title">微信小程序App</view>
+	<form bindsubmit="login" catchreset="formReset">
+		<view class="login-box">
+			<input hidden name="action" value="{{action}}" />
+			<label>用户名</label>
+			<input placeholder="请输入用户名" class="weui-input" name="username" value="{{username}}"/>
+			<label>密码</label>
+			<input placeholder="请输入密码" class="weui-input" password name="password"  />
+			<button class="login-btn" form-type="submit">立即登录</button>
+			<view class="btn-foot">
+				<button class="register-btn" bindtap='register'>注册</button>
+				<button class="login-reset" form-type="reset">重置</button>
+			</view>
+			<view class="three-line">一一一一一第三方登录一一一一一</view>
+			<button class="login-btn" style="background-color:green;">微信登录</button>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,126 @@
+page {
+	height: 100%;
+	/* 使用page的height可以使页面占全屏 */
+	background-color: #faf8fa;
+}
+
+.page {
+  overflow: hidden;
+}
+.head-btn {
+  display: flex;
+  margin: 20px auto;
+}
+.icon-box {
+  display: flex;
+  position: relative;
+  margin-top: 0.625rem;
+  right: -20rem;
+}
+.icon-box-ctn {
+  padding-left: 0.3125rem;
+}
+.page__bd {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.weui-btn + .weui-btn {
+  margin-top: 0;
+}
+.head-btn button {
+  height: 3.25rem;
+  width: 11.25rem;
+  font-size: 16px;
+  padding-top: 0.225rem;
+}
+.page__bd button {
+  margin-top: 0.525rem !important;
+}
+.toast-box {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.toastbg {
+  opacity: 0.2;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+}
+.showToast {
+  position: absolute;
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+.toast-title {
+  padding-left: 5%;
+  background-color: #2196f3;
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  border-top-right-radius: 16rpx;
+  border-top-left-radius: 16rpx;
+}
+.toast-main {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: white;
+  text-align: center;
+}
+.toast-input {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ddd;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.toast-button {
+  display: flex;
+}
+.button1 {
+  width: 50%;
+}
+.button2 {
+  width: 50%;
+}
+.button1 button {
+  width: 100%;
+  background-color: white;
+  color: red;
+  border-radius: 0px;
+  border-bottom-left-radius: 16rpx;
+}
+.button2 button {
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
+  border-bottom-right-radius: 16rpx;
+}
+.field {
+  margin: 3.125rem;
+}
+.field .van-field__label {
+  color: #6144ff;
+}
+.cancel {
+  padding: 0.25rem;
+}
+.subscription .van-grid-item__content {
+  padding: 0.625rem;
+}
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}

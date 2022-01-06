@@ -1,0 +1,20 @@
+<view class="login-container">
+	<view class="title">注册</view>
+	<form bindsubmit="register" catchreset="formReset">
+		<view class="login-box">
+			<input hidden name="action" value="{{action}}" />
+			<label>用户名</label>
+			<input placeholder="请输入用户名" class="weui-input" name="username" />
+			<label>密码</label>
+			<input placeholder="请输入密码" class="weui-input" password name="ispassword" />
+			<label>确认密码</label>
+			<input placeholder="请输入密码" class="weui-input" password name="password" />
+			<label>授权码</label>
+			<input placeholder="联系管理员获取授权码" class="weui-input" password name="authorize"/>
+			<button class="register-btn" form-type="submit">立即注册</button>
+			<view class="btn-foot">
+				<button class="register-reset" form-type="reset">重置</button>
+			</view>
+		</view>
+	</form>
+</view>

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/login/login",
+	"pages/register/register",
+    "pages/simpleDemo/simple"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff0f9",
+    "navigationBarTitleText": "物联网IoT小程序",
+    "navigationBarTextStyle": "black",
+	"backgroundColor":"#ffddee",
+	"backgroundColorTop":"#ffc7e9"
+  },
+  
+  "sitemapLocation": "sitemap.json",
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    }
+}

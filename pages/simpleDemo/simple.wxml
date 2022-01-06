@@ -1,0 +1,74 @@
+<view class="page">
+	<view class="icon-box">
+		<icon class="icon-box-img" type="{{connectState ? 'success':'cancel'}}" size="25"></icon>
+		<view class="icon-box-ctn">
+			{{connectState ? '已连接':'未连接'}}
+		</view>
+	</view>
+	<view class="head-btn">
+		<button class="weui-btn" type="primary" bindtap='onClick_connect'>连接服务器</button>
+		<button class="weui-btn" type="warn" bindtap='onClick_close'>关闭连接</button>
+	</view>
+
+	<!-- 订阅主题 -->
+	<van-row class="mid">
+		<van-col span="16" offset="4">
+			<van-button color="linear-gradient(to right, #ff40ff, #6149f6)" bindtap='add_SubOne' size="large">
+				添加订阅主题</van-button>
+		</van-col>
+	</van-row>
+
+	<van-grid column-num="1">
+		<van-grid-item use-slot>
+			已订阅的主题
+		</van-grid-item>
+	</van-grid>
+	<van-grid column-num="1" center="{{false}}" class="subscription">
+		<van-grid-item use-slot wx:for="{{ topics }}" wx:for-item="item" wx:for-index="index" wx:key="index">
+			<van-row>
+				<van-col span="8">
+					{{item.name ? item.name:"未订阅任何主题"}}
+				</van-col>
+				<van-col span="4" offset="6">
+					<van-switch checked="{{ item.state}}" data-index="{{index}}" data-item='{{item}}'
+						bind:change="onChange" size="24px" />
+				</van-col>
+				<van-col span="5">
+					<van-button type="primary" size="small" data-index="{{index}}" bind:click="unSubscription">删除
+					</van-button>
+				</van-col>
+			</van-row>
+		</van-grid-item>
+	</van-grid>
+
+
+
+	<!-- 发布信息 -->
+	<van-cell-group class="field">
+		<van-field value="{{ message }}" bind:change="messageForm" label="发布消息" type="textarea"
+			placeholder="{{subscriptionIng ?'当前选择的主题[' +subscriptionIng + ']':'请选择主题'}}" autosize border clearable
+			clickable />
+	</van-cell-group>
+
+	<!-- 取消订阅 -->
+	<view class="head-btn">
+		<button class="weui-btn" type="primary" plain="true" bindtap='onClick_PubMsg'>发布一则消息</button>
+	</view>
+
+	<!-- 弹出框 -->
+	<van-dialog use-slot title="订阅" show="{{ show }}" show-cancel-button bind:close="onClose"
+		bind:confirm="subscription">
+		<van-field clearable value="{{inputSubscriptionName}}" placeholder="订阅名称" bind:change="subscriptionForm">
+		</van-field>
+	</van-dialog>
+	
+	
+
+
+	<!-- 版权 -->
+	<view class="weui-footer weui-footer_fixed-bottom">
+		<view class="weui-footer__text">Copyright ©AUGUST</view>
+	</view>
+
+
+</view>
