@@ -29,6 +29,7 @@ const request = (url, options) => {
 				}
 			},
 			fail(error) {
+				console.log(error);
 				//返回失败也同样传入reject()方法
 				reject(error.data)
 			}

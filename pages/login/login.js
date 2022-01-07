@@ -51,6 +51,7 @@ Page({
 				}
 
 				if (res.state) {
+					wx.hideToast()
 					wx.redirectTo({
 						url: '../simpleDemo/simple'
 					})
@@ -67,11 +68,11 @@ Page({
 			}
 		}).catch(err => {
 			wx.showToast({
-				title: err.message,
+				title: "登录失败",
 				icon: 'none'
 			})
 		})
-		wx.hideToast()
+		
 
 	},
 
