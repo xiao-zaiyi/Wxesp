@@ -27,7 +27,7 @@ Page({
 			this.showModal(error)
 			return false
 		}
-
+		//授权码===密码(通过MD5加密存入数据库)
 		if (md5(e.detail.value.authorize) === md5(e.detail.value.password)) {
 			wx.showLoading({
 				title: '注册中,请稍后..',
