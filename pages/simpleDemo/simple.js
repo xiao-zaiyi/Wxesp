@@ -4,7 +4,7 @@ import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 
 import api from "../../api/request.js"
 //连接的服务器域名，注意格式！！！
-const host = 'wxs://www.xiaozaiyi.xyz/mqtt';
+const host = 'wxs://xxxxxxxx/mqttxxx';
 
 //导入验证js
 import WxValidate from "../../utils/WxValidate";
