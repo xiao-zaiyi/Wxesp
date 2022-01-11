@@ -3,7 +3,7 @@
 // const baseUrl = 'http://localhost:8080/wxEsp';
 // const baseUrl = 'http://192.168.1.66:8080/wxEsp';
 // 服务器地址
-const baseUrl = 'https://www.xiaozaiyi.xyz/wxEsp';
+const baseUrl = 'https://www.xxxxxx';
 const request = (url, options) => {
 	return new Promise((resolve, reject) => {
 		wx.request({
